@@ -2,29 +2,15 @@ package sample;
 
 
 public class Hero{
-    short xIndex;
-    short yIndex;
+
     short Health;
     short Attack;
-    short Movement;
     short InitativeValue;
 
-
-    public short getxIndex() {
-        return xIndex;
-    }
-
-    public void setxIndex(short xIndex) {
-        this.xIndex = xIndex;
-    }
-
-    public short getyIndex() {
-        return yIndex;
-    }
-
-    public void setyIndex(short yIndex) {
-        this.yIndex = yIndex;
-    }
+    double magicResistance;
+    double armor;
+    double evade;
+    double crit;
 
     public short getHealth() {
         return Health;
@@ -42,14 +28,6 @@ public class Hero{
         Attack = attack;
     }
 
-    public short getMovement() {
-        return Movement;
-    }
-
-    public void setMovement(short movement) {
-        Movement = movement;
-    }
-
     public short getInitativeValue() {
         return InitativeValue;
     }
@@ -58,5 +36,36 @@ public class Hero{
         InitativeValue = initativeValue;
     }
 
+    public double getMagicResistance() {
+        return magicResistance;
+    }
+
+    public void setMagicResistance(double magicResistance) {
+        this.magicResistance = magicResistance;
+    }
+
+    public double getArmor() {
+        return armor;
+    }
+
+    public void setArmor(double armor) {
+        this.armor = armor;
+    }
+
+    public double getEvade() {
+        return evade;
+    }
+
+    public void setEvade(double evade) {
+        this.evade = evade;
+    }
+
+    public double getCrit() {
+        return crit;
+    }
+
+    public void setCrit(double crit) {
+        this.crit = crit;
+    }
 }
 
