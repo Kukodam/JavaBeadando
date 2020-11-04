@@ -15,11 +15,15 @@ public class Kancso extends Hero {
 
         public void Placeholder()
         {
-
+            /*
+                  XD
+             */
         }
 
         public void Placeholder2()
         {
+            /*
 
+             */
         }
 }
