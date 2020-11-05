@@ -3,36 +3,36 @@ package sample;
 
 public class Hero{
 
-    short Health;
-    short Attack;
-    short InitativeValue;
+    protected double Health;
+    protected double Attack;
+    protected double InitativeValue;
 
-    double magicResistance;
-    double armor;
-    double evade;
-    double crit;
+    protected double magicResistance;
+    protected double armor;
+    protected double evade;
+    protected double crit;
 
-    public short getHealth() {
+    public double getHealth() {
         return Health;
     }
 
-    public void setHealth(short health) {
+    public void setHealth(double health) {
         Health = health;
     }
 
-    public short getAttack() {
+    public double getAttack() {
         return Attack;
     }
 
-    public void setAttack(short attack) {
+    public void setAttack(double attack) {
         Attack = attack;
     }
 
-    public short getInitativeValue() {
+    public double getInitativeValue() {
         return InitativeValue;
     }
 
-    public void setInitativeValue(short initativeValue) {
+    public void setInitativeValue(double initativeValue) {
         InitativeValue = initativeValue;
     }
 
