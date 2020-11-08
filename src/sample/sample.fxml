@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <GridPane hgap="50.0" maxHeight="350.0" maxWidth="350.0" minHeight="350.0" minWidth="350.0" prefHeight="350.0" prefWidth="350.0" vgap="20.0">
             <columnConstraints>
@@ -19,7 +19,7 @@
         </GridPane>
         <ToolBar fx:id="MainMenu" prefHeight="40.0" prefWidth="200.0">
             <items>
-                <Button fx:id="startButton" mnemonicParsing="false" onAction="#buttonOnAction" text="Start" />
+                <Button fx:id="startButton" mnemonicParsing="false" onAction="#onbutton" text="Start" />
             </items>
         </ToolBar>
     </children>
