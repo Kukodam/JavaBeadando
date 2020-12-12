@@ -1,71 +1,178 @@
 package sample;
 
 
+import javafx.scene.image.Image;
+
 public class Hero{
 
-    protected double Health;
-    protected double Attack;
-    protected double InitativeValue;
+    private int id;
+    private String name;
+    private int level;
+    private int exp;
+    private String hero_class;
+    private Stats stats;
+    private Image[] image;
+    private String[] skill = new String[2];
 
-    protected double magicResistance;
-    protected double armor;
-    protected double evade;
-    protected double crit;
-
-    public double getHealth() {
-        return Health;
+    public Hero(String name, String hero_class) {
+        this(name, 0, hero_class);
     }
 
-    public void setHealth(double health) {
-        Health = health;
+    public Hero(String name, int exp, String hero_class)
+    {
+        this.id = hashCode();
+        this.name = name;
+        this.level = 1;
+        this.hero_class = hero_class;
+        this.exp = exp;
+        setLevel();
+        setStats();
+        setImage();
     }
 
-    public double getAttack() {
-        return Attack;
+    public Hero(int id, String name, int exp, String hero_class) {
+        this(name, exp, hero_class);
+        this.id = id;
     }
 
-    public void setAttack(double attack) {
-        Attack = attack;
+    //GETTER
+    public String getName() {
+        return name;
     }
 
-    public double getInitativeValue() {
-        return InitativeValue;
+    public int getLevel() {
+        return level;
     }
 
-    public void setInitativeValue(double initativeValue) {
-        InitativeValue = initativeValue;
+    public int getExp() {
+        return exp;
     }
 
-    public double getMagicResistance() {
-        return magicResistance;
+    public String getHero_class(){ return hero_class; }
+
+    public Stats getStats() {
+        return stats;
     }
 
-    public void setMagicResistance(double magicResistance) {
-        this.magicResistance = magicResistance;
+    public Image getImage(boolean isFlip) {
+        if (isFlip) return image[1];
+        else return image[0];
     }
 
-    public double getArmor() {
-        return armor;
+    public String[] getSkill() {
+        return skill;
     }
 
-    public void setArmor(double armor) {
-        this.armor = armor;
+    public int getCriteria() {
+        return (int)Math.round(Math.pow(3 * level + 70, 2) / 9);
     }
 
-    public double getEvade() {
-        return evade;
+    public int getId() {
+        return id;
     }
 
-    public void setEvade(double evade) {
-        this.evade = evade;
+    public boolean plusExp(int exp) {
+        this.exp += exp;
+        return setLevel();
     }
 
-    public double getCrit() {
-        return crit;
+    //SETTER
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setCrit(double crit) {
-        this.crit = crit;
+    public void setHero_class(String hero_class) {
+        this.hero_class = hero_class;
+        setImage();
     }
+
+    private boolean setLevel() {
+        setSkills();
+        if (exp < getCriteria() || this.level >= 10) return false;
+        while (exp >= getCriteria()) {
+            exp -= getCriteria();
+            level++;
+            setPlusStats(this.stats.getAtk()+ 2,
+                    this.stats.getDef()+2,
+                    this.stats.getHp()+10,
+                    this.stats.getMaxHp()+10);
+        }
+        return true;
+    }
+
+    private void setSkills() {
+        switch (hero_class) {
+            case "KUKODAM":
+                skill[0] = "Slaving";
+                skill[1] = "BRB(4 hours ago)";
+                break;
+            case "ROLAND":
+                skill[0] = "Waterfall";
+                skill[1] = "Waterstorm";
+                break;
+            case "SOMA":
+                skill[0] = "Tornado";
+                skill[1] = "Mega Tonado";
+                break;
+        }
+    }
+
+    private void setStats() {
+        this.stats = new Stats(this.level);
+    }
+
+    private void setPlusStats(double atk, double def, double hp, double maxhp)
+    {
+        if(atk != 0)
+        {
+            this.stats.setAtk(atk);
+        }
+        if(def != 0)
+        {
+            this.stats.setDef(def);
+        }
+        if(hp != 0)
+        {
+            this.stats.setHp(hp);
+        }
+        if (maxhp != 0)
+        {
+            this.stats.setMaxHp(maxhp);
+        }
+
+    }
+
+    private void setImage() {
+        this.image = new Image[2];
+        String path = "";
+        String pathFlip = "";
+        switch (hero_class) {
+            case "KUKODAM":
+                path = "assets/FireFlip.png";
+                pathFlip = "assets/FireFlip.png";
+                break;
+            case "ROLAND":
+                path = "assets/WaterFlip.png";
+                pathFlip = "assets/WaterFlip.png";
+                break;
+            case "SOMA":
+                path = "assets/WindFlip.png";
+                pathFlip = "assets/WindFlip.png";
+                break;
+        }
+        this.image[0] = new Image(path);
+        this.image[1] = new Image(pathFlip);
+    }
+
+    void setLevel(int level) {
+        this.level = level;
+        setStats();
+    }
+
+    public void reset() {
+        this.stats = new Stats(this.level);
+    }
+
+
 }
 
