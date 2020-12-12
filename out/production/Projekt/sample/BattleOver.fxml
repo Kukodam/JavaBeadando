@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="battleSummaryPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BattleOverController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/hatter2.jpg" />
+            </image>
+        </ImageView>
+        <Text fx:id="statusText" layoutX="110.0" layoutY="266.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="YOU'VE RAN AWAY" textAlignment="CENTER" wrappingWidth="579.0">
+            <font>
+                <Font name="Avenir Black" size="53.0" />
+            </font>
+        </Text>
+        <Text layoutX="357.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REWARD">
+            <font>
+                <Font name="Avenir Heavy" size="20.0" />
+            </font>
+        </Text>
+        <Text layoutX="318.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXP" textAlignment="RIGHT" wrappingWidth="53.0" GridPane.columnIndex="0">
+            <font>
+                <Font name="Avenir Heavy" size="20.0" />
+            </font>
+        </Text>
+        <Text fx:id="expRewardText" layoutX="407.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1990" wrappingWidth="89.0" GridPane.columnIndex="1">
+            <font>
+                <Font name="Avenir Heavy" size="20.0" />
+            </font>
+        </Text>
+        <Button blendMode="MULTIPLY" layoutX="339.0" layoutY="427.0" mnemonicParsing="false" onAction="#continueButtonEvent" prefHeight="60.0" prefWidth="122.0" text="Continue">
+            <font>
+                <Font name="Avenir Medium" size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
