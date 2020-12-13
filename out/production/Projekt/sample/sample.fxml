@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="startPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Start">
+<AnchorPane fx:id="startPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Start">
     <children>
         <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assets/hatter2.jpg" />
+                <Image url="@../assets/background.jpg" />
             </image>
         </ImageView>
-        <Button layoutX="300.0" layoutY="400.0" mnemonicParsing="false" onAction="#startButtonEvent" style="-fx-background-radius: 10%; -fx-border-color: none; -fx-background-color: #430000;" text="START" textAlignment="CENTER" textFill="WHITE">
+        <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="250.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/pannon.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="315.0" layoutY="400.0" mnemonicParsing="false" onAction="#startButtonEvent" style="-fx-background-radius: 10%; -fx-border-color: none; -fx-background-color: #430000;" text="START" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Avenir Black" size="31.0" />
             </font>

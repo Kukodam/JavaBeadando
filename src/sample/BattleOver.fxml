@@ -9,7 +9,7 @@
     <children>
         <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assets/hatter2.jpg" />
+                <Image url="@../assets/background.jpg" />
             </image>
         </ImageView>
         <Text fx:id="statusText" layoutX="110.0" layoutY="266.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="YOU'VE RAN AWAY" textAlignment="CENTER" wrappingWidth="579.0">

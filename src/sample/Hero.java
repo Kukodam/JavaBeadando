@@ -11,7 +11,7 @@ public class Hero{
     private int exp;
     private String hero_class;
     private Stats stats;
-    private Image[] image;
+    private Image image;
     private String[] skill = new String[2];
 
     public Hero(String name, String hero_class) {
@@ -55,8 +55,7 @@ public class Hero{
     }
 
     public Image getImage(boolean isFlip) {
-        if (isFlip) return image[1];
-        else return image[0];
+        return image;
     }
 
     public String[] getSkill() {
@@ -64,7 +63,7 @@ public class Hero{
     }
 
     public int getCriteria() {
-        return (int)Math.round(Math.pow(3 * level + 70, 2) / 9);
+        return (int)Math.round(Math.pow(4 * level + 50, 2) / 10);
     }
 
     public int getId() {
@@ -102,15 +101,15 @@ public class Hero{
 
     private void setSkills() {
         switch (hero_class) {
-            case "KUKODAM":
+            case "JAVA":
                 skill[0] = "Slaving";
                 skill[1] = "BRB(4 hours ago)";
                 break;
-            case "ROLAND":
+            case "C++":
                 skill[0] = "Waterfall";
                 skill[1] = "Waterstorm";
                 break;
-            case "SOMA":
+            case "C#":
                 skill[0] = "Tornado";
                 skill[1] = "Mega Tonado";
                 break;
@@ -143,25 +142,19 @@ public class Hero{
     }
 
     private void setImage() {
-        this.image = new Image[2];
         String path = "";
-        String pathFlip = "";
         switch (hero_class) {
-            case "KUKODAM":
-                path = "assets/FireFlip.png";
-                pathFlip = "assets/FireFlip.png";
+            case "JAVA":
+                path = "assets/Java.png";
                 break;
-            case "ROLAND":
-                path = "assets/WaterFlip.png";
-                pathFlip = "assets/WaterFlip.png";
+            case "C++":
+                path = "assets/c++.png";
                 break;
-            case "SOMA":
-                path = "assets/WindFlip.png";
-                pathFlip = "assets/WindFlip.png";
+            case "C#":
+                path = "assets/c#.png";
                 break;
         }
-        this.image[0] = new Image(path);
-        this.image[1] = new Image(pathFlip);
+        this.image = new Image(path);
     }
 
     void setLevel(int level) {

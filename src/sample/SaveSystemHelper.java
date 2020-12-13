@@ -79,38 +79,23 @@ public class SaveSystemHelper {
         java.util.Random random = new java.util.Random();
         Hero hero;
         int lv = baseLevel + random.nextInt(27) % 3;
-        hero = new Hero(getRandomHeroOpponent(), 0, getRandomOpponentClass());
+        hero = new Hero("Opponent", 0, getRandomOpponentClass());
         hero.setLevel(lv);
         return hero;
     }
 
     private String getRandomOpponentClass() {
         int r = new Random().nextInt(4);
-        String hero_class = "KUKODAM";
+        String hero_class = "JAVA";
         if (r == 1) {
-            hero_class = "ROLAND";
+            hero_class = "JAVA";
         } else if (r == 2) {
-            hero_class = "SOMA";
+            hero_class = "C++";
         } else {
-            hero_class = "KUKODAM";
+            hero_class = "C#";
         }
 
         return hero_class;
     }
-
-    private String getRandomHeroOpponent() {
-        int line = new java.util.Random().nextInt(237) + 1;
-        try {
-            FileInputStream fis = new FileInputStream("heroList.save");
-            Scanner sc = new Scanner(fis);
-            for (int count = 0; count != line; count++) sc.nextLine();
-            return sc.nextLine();
-        } catch (FileNotFoundException fe) {
-            System.err.println("Not found");
-        }
-        return null;
-    }
-
-
 
 }

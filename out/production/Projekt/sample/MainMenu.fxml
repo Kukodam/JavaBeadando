@@ -9,7 +9,7 @@
     <children>
         <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assets/hatter2.jpg" />
+                <Image url="@../assets/background.jpg" />
             </image>
         </ImageView>
         <GridPane layoutX="56.0" layoutY="83.0" prefHeight="426.0" prefWidth="689.0" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="56.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="83.0">

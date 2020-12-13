@@ -66,7 +66,7 @@ public class HeroCreationController {
 
     @FXML
     void initialize() {
-        player = new Hero("temp", "KUKODAM");
+        player = new Hero("temp", "JAVA");
         createCharacterButton.setDisable(true);
         update();
     }
@@ -86,15 +86,15 @@ public class HeroCreationController {
         else if (type < 1) type = 3;
         if(type == 1)
         {
-            player.setHero_class("KUKODAM");
+            player.setHero_class("JAVA");
         }
         else if(type == 2)
         {
-            player.setHero_class("SOMA");
+            player.setHero_class("C++");
         }
         else if(type == 3)
         {
-            player.setHero_class("ROLAND");
+            player.setHero_class("C#");
         }
         update();
     }

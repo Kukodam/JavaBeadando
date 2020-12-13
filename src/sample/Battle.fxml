@@ -9,18 +9,18 @@
     <children>
         <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assets/hatter2.jpg" />
+                <Image url="@../assets/background.jpg" />
             </image>
         </ImageView>
         <ImageView fx:id="opponentImage" fitHeight="330.0" fitWidth="275.0" layoutX="468.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
         <ImageView fitHeight="130.0" fitWidth="360.0" layoutX="420.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assets/915.png" />
+                <Image url="@../assets/hpbar.png" />
             </image></ImageView>
         <ImageView fx:id="playerImage" fitHeight="330.0" fitWidth="275.0" layoutX="78.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
         <ImageView fitHeight="130.0" fitWidth="360.0" layoutX="35.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../assets/915.png" />
+                <Image url="@../assets/hpbar.png" />
             </image></ImageView>
         <GridPane layoutX="453.0" layoutY="470.0" prefHeight="130.0" prefWidth="347.0">
             <columnConstraints>

@@ -35,7 +35,7 @@ public class BattleOverController {
             statusText.setText("YOU LOSE");
         } else if (opponent.getStats().getHp()<=0) {
             statusText.setText("YOU WIN");
-            exp = opponent.getLevel()*5;
+            exp = opponent.getLevel()*10;
             player.plusExp(exp);
         } else {
             statusText.setText("YOU'VE RAN AWAY");
