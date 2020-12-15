@@ -102,16 +102,16 @@ public class Hero{
     private void setSkills() {
         switch (hero_class) {
             case "JAVA":
-                skill[0] = "Slaving";
-                skill[1] = "BRB(4 hours ago)";
+                skill[0] = "System.out.printl()";
+                skill[1] = "scanner.nextline()";
                 break;
             case "C++":
-                skill[0] = "Waterfall";
-                skill[1] = "Waterstorm";
+                skill[0] = "cout << ";
+                skill[1] = "cin >>";
                 break;
             case "C#":
-                skill[0] = "Tornado";
-                skill[1] = "Mega Tonado";
+                skill[0] = "Console.WriteLine()";
+                skill[1] = "Console.ReadLine()";
                 break;
         }
     }
